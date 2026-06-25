@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(126, 213, 215);
+}
+h2{
+    color: rgb(194, 8, 39);
+}
+button{
+    background-color: rgb(197, 105, 192);
+    color: rgb(1, 8, 5);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+#pokemonInput{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(48, 240, 10);
+    border-radius: 5px;
+    color: rgb(1, 8, 5)
+}

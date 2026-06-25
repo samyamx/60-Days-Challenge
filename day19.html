@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Text Analyzer</title>
+    <link rel="stylesheet" href="day19.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Live Text Analyzer</h1>
+        <p class="subtitle">Start typing and see the jaduu happen XD</p>
+
+        <textarea
+            id="textInput"
+            placeholder="Type something here..."
+        ></textarea>
+
+        <div class="stats">
+            <div class="card">
+                <h3>Characters</h3>
+                <span id="charCount">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Words</h3>
+                <span id="wordCount">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Last Key</h3>
+                <span id="lastKey">-</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="day19.js"></script>
+</body>
+</html>
