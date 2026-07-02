@@ -9,18 +9,35 @@ body{
     justify-content:center;
     align-items:center;
     height:100vh;
-    background:#1f2937;
-    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#111827,#1f2937,#0f172a);
+    font-family:Arial,Helvetica,sans-serif;
 }
+
+/*================ GAME =================*/
 
 .game{
     width:900px;
     height:350px;
-    border:4px solid #222;
-    background:linear-gradient(#87CEEB,#cfefff);
     position:relative;
     overflow:hidden;
+    border-radius:18px;
+    border:5px solid #222;
+    background:linear-gradient(#6dd5fa,#dff6ff);
+    box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
+
+/*================ MOVING CLOUDS =================*/
+
+.game::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:url("https://www.transparenttextures.com/patterns/clouds.png");
+    opacity:.35;
+    animation:clouds 25s linear infinite;
+}
+
+/*================ GROUND =================*/
 
 .game::after{
     content:"";
@@ -28,85 +45,203 @@ body{
     bottom:0;
     width:100%;
     height:60px;
-    background:#3fa34d;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #43a047 0 40px,
+            #4caf50 40px 80px
+        );
+    border-top:4px solid #2e7d32;
 }
 
-#ninja{
-    width:60px;
-    height:60px;
-    background:#111;
-    position:absolute;
-    bottom:60px;
-    left:80px;
-    border-radius:10px;
-}
-
-#ninja::before{
-    content:"";
-    width:15px;
-    height:15px;
-    background:white;
-    border-radius:50%;
-    position:absolute;
-    top:15px;
-    left:35px;
-}
-
-#obstacle{
-    width:40px;
-    height:60px;
-    background:#8b4513;
-    position:absolute;
-    bottom:60px;
-    right:-40px;
-}
+/*================ SCORE =================*/
 
 .score{
     position:absolute;
     top:15px;
     left:15px;
+    padding:10px 18px;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(10px);
+    border-radius:12px;
     font-size:24px;
     font-weight:bold;
     color:#222;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 
+/*================ NINJA =================*/
+
+#ninja{
+    width:60px;
+    height:60px;
+    position:absolute;
+    left:80px;
+    bottom:60px;
+    background:#111;
+    border-radius:12px;
+    box-shadow:
+        inset -8px -8px rgba(255,255,255,.08),
+        0 8px 15px rgba(0,0,0,.35);
+}
+
+/* Eye */
+
+#ninja::before{
+    content:"";
+    position:absolute;
+    width:13px;
+    height:13px;
+    background:white;
+    border-radius:50%;
+    top:17px;
+    left:37px;
+    box-shadow:-18px 0 white;
+}
+
+/* Red headband */
+
+#ninja::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:8px;
+    top:18px;
+    left:0;
+    background:#ff3d3d;
+}
+
+/*================ OBSTACLE =================*/
+
+#obstacle{
+    width:40px;
+    height:60px;
+    position:absolute;
+    bottom:60px;
+    right:-40px;
+    background:linear-gradient(#8b4513,#5d2f0a);
+    border-radius:4px;
+    box-shadow:
+        inset -6px -6px rgba(255,255,255,.1),
+        0 6px 10px rgba(0,0,0,.3);
+}
+
+/* Little spikes */
+
+#obstacle::before{
+    content:"";
+    position:absolute;
+    top:-10px;
+    left:0;
+    width:100%;
+    height:10px;
+    background:
+    repeating-linear-gradient(
+        45deg,
+        transparent 0 8px,
+        #d4af37 8px 16px
+    );
+}
+
+/*================ JUMP =================*/
+
 .jump{
-    animation:jump .6s ease;
+    animation:jump .6s cubic-bezier(.17,.67,.42,1.25);
 }
 
 @keyframes jump{
 
-0%{
-    bottom:60px;
+    0%{
+        bottom:60px;
+        transform:rotate(0deg);
+    }
+
+    35%{
+        bottom:170px;
+        transform:rotate(-8deg);
+    }
+
+    50%{
+        bottom:190px;
+        transform:rotate(0deg);
+    }
+
+    70%{
+        transform:rotate(8deg);
+    }
+
+    100%{
+        bottom:60px;
+        transform:rotate(0deg);
+    }
+
 }
 
-50%{
-    bottom:170px;
+/*================ CLOUD ANIMATION =================*/
+
+@keyframes clouds{
+
+    from{
+        background-position:0 0;
+    }
+
+    to{
+        background-position:-900px 0;
+    }
+
 }
 
-100%{
-    bottom:60px;
-}
-
-}
+/*================ GAME OVER =================*/
 
 #gameOver{
     position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.7);
+    inset:0;
     display:none;
     justify-content:center;
     align-items:center;
     flex-direction:column;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(5px);
     color:white;
+    animation:fade .4s ease;
+}
+
+#gameOver h1{
+    font-size:55px;
+    text-shadow:0 5px 15px black;
 }
 
 button{
-    margin-top:20px;
-    padding:12px 30px;
+    margin-top:25px;
+    padding:14px 35px;
     border:none;
-    border-radius:10px;
-    cursor:pointer;
+    border-radius:12px;
     font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    color:white;
+    background:linear-gradient(135deg,#00c853,#009624);
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+button:hover{
+    transform:translateY(-3px) scale(1.05);
+    background:linear-gradient(135deg,#00e676,#00c853);
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
 }
