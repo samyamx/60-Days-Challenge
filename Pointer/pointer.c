@@ -2,18 +2,18 @@
 
 int main()
 {
-    int arr[5]={12,45,23,89,34};
+    int a=10;
+    int *p=&a;
 
-    int *ptr=arr;
-    int max=*ptr;
+    printf("%d\n",*p);
 
-    for(int i=1;i<5;i++)
-    {
-        if(*(ptr+i)>max)
-            max=*(ptr+i);
-    }
+    *p=25;
 
-    printf("Largest = %d",max);
+    printf("%d\n",a);
+
+    printf("%p\n",p);
+
+    printf("%p\n",&a);
 
     return 0;
 }
