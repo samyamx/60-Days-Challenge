@@ -2,17 +2,18 @@
 
 int main()
 {
-    int arr[5]={2,4,6,8,10};
+    int arr[5]={12,45,23,89,34};
 
     int *ptr=arr;
-    int sum=0;
+    int max=*ptr;
 
-    for(int i=0;i<5;i++)
+    for(int i=1;i<5;i++)
     {
-        sum += *(ptr+i);
+        if(*(ptr+i)>max)
+            max=*(ptr+i);
     }
 
-    printf("Sum = %d",sum);
+    printf("Largest = %d",max);
 
     return 0;
 }
