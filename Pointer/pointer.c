@@ -2,19 +2,12 @@
 
 int main() {
 
-    int arr[] = {10,20,30,40,50};
+    int arr[5]={10,20,30,40,50};
 
-    int *ptr = arr;
-
-    printf("%d\n", *ptr);
-
-    ptr++;
-
-    printf("%d\n", *ptr);
-
-    ptr++;
-
-    printf("%d\n", *ptr);
+    for(int i=0;i<5;i++)
+    {
+        printf("Address = %p\tValue = %d\n",&arr[i],arr[i]);
+    }
 
     return 0;
 }
