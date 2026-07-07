@@ -1,13 +1,23 @@
 #include <stdio.h>
+#include <stdio.h>
 
-int main() {
+void swap(int *a,int *b)
+{
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+}
 
-    int arr[5]={10,20,30,40,50};
+int main()
+{
+    int x=10;
+    int y=20;
 
-    for(int i=0;i<5;i++)
-    {
-        printf("Address = %p\tValue = %d\n",&arr[i],arr[i]);
-    }
+    printf("Before Swap: %d %d\n",x,y);
+
+    swap(&x,&y);
+
+    printf("After Swap: %d %d\n",x,y);
 
     return 0;
 }
