@@ -1,23 +1,18 @@
 #include <stdio.h>
-#include <stdio.h>
-
-void swap(int *a,int *b)
-{
-    int temp=*a;
-    *a=*b;
-    *b=temp;
-}
 
 int main()
 {
-    int x=10;
-    int y=20;
+    int arr[5]={2,4,6,8,10};
 
-    printf("Before Swap: %d %d\n",x,y);
+    int *ptr=arr;
+    int sum=0;
 
-    swap(&x,&y);
+    for(int i=0;i<5;i++)
+    {
+        sum += *(ptr+i);
+    }
 
-    printf("After Swap: %d %d\n",x,y);
+    printf("Sum = %d",sum);
 
     return 0;
 }
