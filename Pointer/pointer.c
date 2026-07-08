@@ -2,20 +2,16 @@
 
 int main()
 {
-    int arr[5];
+    int arr[5]={10,20,30,40,50};
+
+    int sum=0;
 
     for(int i=0;i<5;i++)
     {
-        printf("Enter value %d: ",i+1);
-        scanf("%d",&arr[i]);
+        sum=sum+arr[i];
     }
 
-    printf("\nArray Elements\n");
-
-    for(int i=0;i<5;i++)
-    {
-        printf("%d ",arr[i]);
-    }
+    printf("Sum=%d",sum);
 
     return 0;
 }
