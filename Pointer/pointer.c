@@ -2,11 +2,20 @@
 
 int main()
 {
-    int arr[5]={10,20,30,40,50};
+    int arr[5];
 
-    arr[2]=100;
+    for(int i=0;i<5;i++)
+    {
+        printf("Enter value %d: ",i+1);
+        scanf("%d",&arr[i]);
+    }
 
-    printf("%d",arr[2]);
+    printf("\nArray Elements\n");
+
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ",arr[i]);
+    }
 
     return 0;
 }
