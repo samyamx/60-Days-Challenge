@@ -8,10 +8,12 @@ int main()
 
     for(int i=0;i<5;i++)
     {
-        sum=sum+arr[i];
+        sum+=arr[i];
     }
 
-    printf("Sum=%d",sum);
+    float average=(float)sum/5;
+
+    printf("Average=%.2f",average);
 
     return 0;
 }
