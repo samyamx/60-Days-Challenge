@@ -2,21 +2,24 @@
 
 int main()
 {
-    int arr[5]={2,3,8,5,10};
+    int arr[5]={10,20,30,40,50};
 
-    int even=0;
-    int odd=0;
+    int search=90;
+    int found=0;
 
     for(int i=0;i<5;i++)
     {
-        if(arr[i]%2==0)
-            even++;
-        else
-            odd++;
+        if(arr[i]==search)
+        {
+            found=1;
+            break;
+        }
     }
 
-    printf("Even=%d\n",even);
-    printf("Odd=%d\n",odd);
+    if(found)
+        printf("Found");
+    else
+        printf("Not Found");
 
     return 0;
 }
