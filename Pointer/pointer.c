@@ -2,31 +2,27 @@
 
 int main()
 {
-    int arr[] = {1,2,3,5,7,9};
+    int arr[] = {1,1,2,2,3,4,4,5};
+    int n = 8;
 
-    int left = 0;
-    int right = 5;
-    int target = 10;
+    int write = 0;
 
-    while(left < right)
+    for(int read = 1; read < n; read++)
     {
-        int sum = arr[left] + arr[right];
+        if(arr[read] != arr[write])
+        {
+            write++;
+            arr[write] = arr[read];
+        }
+    }
 
-        if(sum == target)
-        {
-            printf("%d %d\n", arr[left], arr[right]);
-            left++;
-            right--;
-        }
-        else if(sum < target)
-        {
-            left++;
-        }
-        else
-        {
-            right--;
-        }
+    printf("Unique elements:\n");
+
+    for(int i = 0; i <= write; i++)
+    {
+        printf("%d ", arr[i]);
     }
 
     return 0;
 }
+
