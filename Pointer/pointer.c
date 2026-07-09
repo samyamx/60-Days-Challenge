@@ -1,28 +1,32 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
-    int n;
+    int arr[] = {1,2,3,5,7,9};
 
-    printf("Enter size: ");
-    scanf("%d",&n);
+    int left = 0;
+    int right = 5;
+    int target = 10;
 
-    int *arr=(int*)malloc(n*sizeof(int));
-
-    for(int i=0;i<n;i++)
+    while(left < right)
     {
-        scanf("%d",&arr[i]);
+        int sum = arr[left] + arr[right];
+
+        if(sum == target)
+        {
+            printf("%d %d\n", arr[left], arr[right]);
+            left++;
+            right--;
+        }
+        else if(sum < target)
+        {
+            left++;
+        }
+        else
+        {
+            right--;
+        }
     }
-
-    printf("Array:\n");
-
-    for(int i=0;i<n;i++)
-    {
-        printf("%d ",arr[i]);
-    }
-
-    free(arr);
 
     return 0;
 }
