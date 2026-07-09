@@ -1,22 +1,28 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-    int arr[5]={2,3,8,5,10};
+    int n;
 
-    int even=0;
-    int odd=0;
+    printf("Enter size: ");
+    scanf("%d",&n);
 
-    for(int i=0;i<5;i++)
+    int *arr=(int*)malloc(n*sizeof(int));
+
+    for(int i=0;i<n;i++)
     {
-        if(arr[i]%2==0)
-            even++;
-        else
-            odd++;
+        scanf("%d",&arr[i]);
     }
 
-    printf("Even=%d\n",even);
-    printf("Odd=%d\n",odd);
+    printf("Array:\n");
+
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+
+    free(arr);
 
     return 0;
 }
