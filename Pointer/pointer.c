@@ -1,28 +1,20 @@
 #include <stdio.h>
 
+int sum()
+{
+    int a=10;
+    int b=20;
+
+    return a+b;
+}
+
 int main()
 {
-    int arr[] = {1,1,2,2,3,4,4,5};
-    int n = 8;
+    int result;
 
-    int write = 0;
+    result=sum();
 
-    for(int read = 1; read < n; read++)
-    {
-        if(arr[read] != arr[write])
-        {
-            write++;
-            arr[write] = arr[read];
-        }
-    }
-
-    printf("Unique elements:\n");
-
-    for(int i = 0; i <= write; i++)
-    {
-        printf("%d ", arr[i]);
-    }
+    printf("%d",result);
 
     return 0;
 }
-
