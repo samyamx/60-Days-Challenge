@@ -1,20 +1,21 @@
 #include <stdio.h>
 
-int sum()
+void swap(int *a, int *b)
 {
-    int a=10;
-    int b=20;
-
-    return a+b;
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 int main()
 {
-    int result;
+    int x = 10, y = 20;
 
-    result=sum();
+    printf("Before Swap: %d %d\n", x, y);
 
-    printf("%d",result);
+    swap(&x, &y);
+
+    printf("After Swap: %d %d\n", x, y);
 
     return 0;
 }
