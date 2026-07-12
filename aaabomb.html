@@ -1,104 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Atomic Bomb - Hiroshima & Nagasaki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Bomb - History & Impact</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+        }
+
+        header{
+            background:#111827;
+            padding:20px 10%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            transition:.3s;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
+        .hero{
+            height:90vh;
+            background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+            url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1500&q=80");
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero h1{
+            font-size:60px;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:20px;
+            max-width:700px;
+            margin:auto;
+            line-height:1.7;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:30px;
+            padding:15px 35px;
+            background:#38bdf8;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight:bold;
+        }
+
+        .section{
+            padding:80px 10%;
+        }
+
+        .section h2{
+            margin-bottom:20px;
+            color:#38bdf8;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+            margin-top:40px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:25px;
+            border-radius:12px;
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        footer{
+            background:#111827;
+            text-align:center;
+            padding:25px;
+            margin-top:50px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <center>
+<header>
+    <h2>Atomic Bomb</h2>
 
-        <h1>☢️ Atomic Bomb</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">History</a>
+        <a href="#">Timeline</a>
+        <a href="#">Effects</a>
+        <a href="#">Gallery</a>
+    </nav>
+</header>
 
-        <h3>History • Remembrance • Peace</h3>
-
-        <hr width="80%">
-
-        <img src="images/hiroshima.jpg"
-             alt="Historical image related to Hiroshima"
-             width="900">
-
-        <h2>Hiroshima & Nagasaki</h2>
-
-        <p>
-            This website is an educational project about the history of the
-            atomic bombings of Hiroshima and Nagasaki during World War II.
-        </p>
+<section class="hero">
+    <div>
+        <h1>Atomic Bomb</h1>
 
         <p>
-            It explores the historical events, scientific background,
-            humanitarian impact, survivor experiences, and the global
-            movement toward peace and nuclear disarmament.
+            Explore the history, scientific background, humanitarian
+            consequences, and global impact of nuclear weapons through an
+            educational perspective.
         </p>
 
-        <hr width="80%">
+        <a href="#" class="btn">Learn More</a>
+    </div>
+</section>
 
-        <table border="1" cellpadding="10" width="80%">
+<section class="section">
 
-            <tr>
-                <th>Section</th>
-                <th>Description</th>
-            </tr>
+    <h2>Overview</h2>
 
-            <tr>
-                <td>📜 History</td>
-                <td>Development of the atomic bomb and events leading to 1945.</td>
-            </tr>
+    <p>
+        The atomic bomb marked a major turning point in modern history.
+        Understanding its development, use, and long-term consequences helps
+        us study science, history, ethics, and international relations.
+    </p>
 
-            <tr>
-                <td>🏙 Hiroshima</td>
-                <td>Historical timeline and impact on the city.</td>
-            </tr>
+    <div class="cards">
 
-            <tr>
-                <td>🏙 Nagasaki</td>
-                <td>Events following the second bombing.</td>
-            </tr>
+        <div class="card">
+            <h3>📜 History</h3>
+            <p>
+                Learn about the development of nuclear technology during
+                World War II and its historical context.
+            </p>
+        </div>
 
-            <tr>
-                <td>⚛ Nuclear Science</td>
-                <td>Basic explanation of nuclear fission.</td>
-            </tr>
+        <div class="card">
+            <h3>⚛ Science</h3>
+            <p>
+                Understand the basic scientific principles behind nuclear
+                reactions in a simplified educational manner.
+            </p>
+        </div>
 
-            <tr>
-                <td>🕊 Peace</td>
-                <td>Global efforts toward nuclear non-proliferation and peace.</td>
-            </tr>
+        <div class="card">
+            <h3>🌍 Global Impact</h3>
+            <p>
+                Discover how nuclear weapons influenced international
+                politics, diplomacy, and arms control.
+            </p>
+        </div>
 
-        </table>
+        <div class="card">
+            <h3>🕊 Peace</h3>
+            <p>
+                Explore ongoing international efforts toward nuclear
+                non-proliferation and peace.
+            </p>
+        </div>
 
-        <br>
+    </div>
 
-        <h2>Navigation</h2>
+</section>
 
-        <p>
-            <a href="#">Home</a> |
-            <a href="#">History</a> |
-            <a href="#">Timeline</a> |
-            <a href="#">Gallery</a> |
-            <a href="#">References</a>
-        </p>
-
-        <hr width="80%">
-
-        <h3>Educational Purpose</h3>
-
-        <p>
-            This website is created for educational purposes to study one of
-            the most significant historical events of the twentieth century
-            and to promote awareness of peace.
-        </p>
-
-        <hr width="80%">
-
-        <p>
-            © 2026 Educational History Project
-        </p>
-
-    </center>
+<footer>
+    <p>Educational Demo Website • Atomic Bomb History & Impact</p>
+</footer>
 
 </body>
-
 </html>
