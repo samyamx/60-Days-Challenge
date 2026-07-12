@@ -1,21 +1,17 @@
 #include <stdio.h>
 
-void swap(int *a, int *b)
-{
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
 int main()
 {
-    int x = 10, y = 20;
+    int a = 25;
+    int b = 40;
 
-    printf("Before Swap: %d %d\n", x, y);
+    int *p1 = &a;
+    int *p2 = &b;
 
-    swap(&x, &y);
-
-    printf("After Swap: %d %d\n", x, y);
+    if (*p1 > *p2)
+        printf("Maximum = %d", *p1);
+    else
+        printf("Maximum = %d", *p2);
 
     return 0;
 }
