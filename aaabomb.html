@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Bomb - History & Impact</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+        }
+
+        header{
+            background:#111827;
+            padding:20px 10%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            transition:.3s;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
+        .hero{
+            height:90vh;
+            background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+            url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1500&q=80");
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero h1{
+            font-size:60px;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:20px;
+            max-width:700px;
+            margin:auto;
+            line-height:1.7;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:30px;
+            padding:15px 35px;
+            background:#38bdf8;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight:bold;
+        }
+
+        .section{
+            padding:80px 10%;
+        }
+
+        .section h2{
+            margin-bottom:20px;
+            color:#38bdf8;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+            margin-top:40px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:25px;
+            border-radius:12px;
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        footer{
+            background:#111827;
+            text-align:center;
+            padding:25px;
+            margin-top:50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Atomic Bomb</h2>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">History</a>
+        <a href="#">Timeline</a>
+        <a href="#">Effects</a>
+        <a href="#">Gallery</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Atomic Bomb</h1>
+
+        <p>
+            Explore the history, scientific background, humanitarian
+            consequences, and global impact of nuclear weapons through an
+            educational perspective.
+        </p>
+
+        <a href="#" class="btn">Learn More</a>
+    </div>
+</section>
+
+<section class="section">
+
+    <h2>Overview</h2>
+
+    <p>
+        The atomic bomb marked a major turning point in modern history.
+        Understanding its development, use, and long-term consequences helps
+        us study science, history, ethics, and international relations.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>📜 History</h3>
+            <p>
+                Learn about the development of nuclear technology during
+                World War II and its historical context.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⚛ Science</h3>
+            <p>
+                Understand the basic scientific principles behind nuclear
+                reactions in a simplified educational manner.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌍 Global Impact</h3>
+            <p>
+                Discover how nuclear weapons influenced international
+                politics, diplomacy, and arms control.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🕊 Peace</h3>
+            <p>
+                Explore ongoing international efforts toward nuclear
+                non-proliferation and peace.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>Educational Demo Website • Atomic Bomb History & Impact</p>
+</footer>
+
+</body>
+</html>
