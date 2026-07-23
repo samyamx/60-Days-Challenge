@@ -1,15 +1,22 @@
 function maxSubArray(nums) {
-    let currentSum = nums[0];
-    let maxSum = nums[0];
 
-    for (let i = 1; i < nums.length; i++) {
-        currentSum = Math.max(nums[i], currentSum + nums[i]);
-        maxSum = Math.max(maxSum, currentSum);
+    let currentSum = 0;
+    let maxSum = -Infinity;
+
+    for (let num of nums) {
+
+        currentSum += num;
+
+        if (currentSum > maxSum) {
+            maxSum = currentSum;
+        }
+
+        if (currentSum < 0) {
+            currentSum = 0;
+        }
     }
 
     return maxSum;
 }
 
-const nums = [-2,1,-3,4,-1,2,9,1,-5,4];
-
-console.log(maxSubArray(nums));
+console.log(maxSubArray([-2,6,-3,-4,-1,8,1,-5,4]));
