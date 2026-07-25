@@ -37,3 +37,42 @@ nav button{
     font-weight:bold;
 }
 
+.hero{
+    height:70vh;
+    background:url("https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1400") center/cover;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+    position:relative;
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.hero button{
+    padding:15px 35px;
+    border:none;
+    border-radius:5px;
+    background:#4caf50;
+    color:white;
+    cursor:pointer;
+}
