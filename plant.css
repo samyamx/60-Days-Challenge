@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7f2;
+}
+
+nav{
+    background:#2e7d32;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+nav input{
+    padding:10px;
+    width:250px;
+    border:none;
+    border-radius:5px;
+}
+
+nav button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    background:white;
+    color:#2e7d32;
+    cursor:pointer;
+    font-weight:bold;
+}
+
