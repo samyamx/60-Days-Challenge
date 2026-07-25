@@ -102,3 +102,27 @@ nav button{
     object-fit:cover;
 }
 
+.card h3,
+.card p{
+    padding:12px 15px;
+}
+
+.card p{
+    color:#2e7d32;
+    font-weight:bold;
+}
+
+.card button{
+    width:calc(100% - 30px);
+    margin:15px;
+    padding:12px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#1b5e20;
+}
