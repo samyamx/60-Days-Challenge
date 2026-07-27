@@ -1242,3 +1242,33 @@ var(--primary)
 );
 
 }
+
+
+
+
+
+/* =========================
+      FEATURE TEXT
+========================= */
+
+.feature h3{
+
+margin-top:20px;
+
+font-size:1.3rem;
+
+font-weight:600;
+
+color:var(--primary-dark);
+
+}
+
+.feature p{
+
+margin-top:10px;
+
+font-size:.95rem;
+
+color:var(--text-light);
+
+}
