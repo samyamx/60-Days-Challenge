@@ -1366,3 +1366,36 @@ transition:.4s;
 box-shadow:var(--shadow);
 
 }
+
+/* =========================
+      BACKGROUND CIRCLE
+========================= */
+
+.category::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+background:rgba(76,175,80,.08);
+
+top:-130px;
+
+right:-110px;
+
+transition:.45s;
+
+}
+
+.category:hover::before{
+
+transform:scale(1.35);
+
+}
+
