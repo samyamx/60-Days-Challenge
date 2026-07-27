@@ -1306,3 +1306,22 @@ transition:.45s;
 transform:scale(1.25);
 
 }
+
+
+/* =========================
+      CATEGORIES
+========================= */
+
+.categories{
+
+background:var(--bg);
+
+padding-top:100px;
+
+}
+
+.categories h2{
+
+margin-bottom:60px;
+
+}
