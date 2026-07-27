@@ -1,128 +1,512 @@
+/* ============================================================
+   GREENLEAF PLANT STORE
+   Professional CSS
+   Part 1 / 10
+============================================================ */
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+        CSS VARIABLES
+========================= */
+
+:root{
+
+--primary:#2E7D32;
+--primary-light:#4CAF50;
+--primary-dark:#1B5E20;
+
+--secondary:#81C784;
+
+--accent:#A5D6A7;
+
+--white:#ffffff;
+
+--bg:#f6fff6;
+
+--bg2:#eef8ee;
+
+--text:#263238;
+
+--text-light:#607D8B;
+
+--shadow:0 15px 35px rgba(0,0,0,.08);
+
+--radius:16px;
+
+--transition:.35s ease;
+
+}
+
+/* =========================
+        RESET
+========================= */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+
+scroll-behavior:smooth;
+
 }
 
 body{
-    background:#f5f7f2;
+
+font-family:'Poppins',sans-serif;
+
+background:var(--bg);
+
+color:var(--text);
+
+line-height:1.7;
+
+overflow-x:hidden;
+
 }
 
-nav{
-    background:#2e7d32;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    flex-wrap:wrap;
-    gap:15px;
+/* =========================
+      CUSTOM SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+width:12px;
+
 }
 
-nav input{
-    padding:10px;
-    width:250px;
-    border:none;
-    border-radius:5px;
+::-webkit-scrollbar-track{
+
+background:#edf5ed;
+
 }
 
-nav button{
-    padding:10px 20px;
-    border:none;
-    border-radius:5px;
-    background:white;
-    color:#2e7d32;
-    cursor:pointer;
-    font-weight:bold;
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:50px;
+
 }
 
-.hero{
-    height:70vh;
-    background:url("https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1400") center/cover;
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--primary-dark);
+
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
+/* =========================
+        LINKS
+========================= */
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
 }
 
-.hero-content{
-    position:relative;
-    color:white;
-    text-align:center;
+ul{
+
+list-style:none;
+
 }
 
-.hero h1{
-    font-size:55px;
+img{
+
+width:100%;
+
+display:block;
+
 }
 
-.hero p{
-    margin:20px 0;
-    font-size:20px;
+/* =========================
+        BUTTON
+========================= */
+
+button{
+
+cursor:pointer;
+
+border:none;
+
+font-family:inherit;
+
+transition:var(--transition);
+
 }
 
-.hero button{
-    padding:15px 35px;
-    border:none;
-    border-radius:5px;
-    background:#4caf50;
-    color:white;
-    cursor:pointer;
+/* =========================
+      GLOBAL SECTION
+========================= */
+
+section{
+
+padding:80px 8%;
+
 }
 
-.products{
-    padding:50px 8%;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+h1{
+
+font-size:3.5rem;
+
+font-weight:700;
+
+line-height:1.2;
+
 }
 
-.card{
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
+h2{
+
+font-size:2.3rem;
+
+margin-bottom:40px;
+
+text-align:center;
+
+color:var(--primary-dark);
+
 }
 
-.card:hover{
-    transform:translateY(-8px);
+h3{
+
+font-size:1.2rem;
+
+margin-top:10px;
+
 }
 
-.card img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
+p{
+
+color:var(--text-light);
+
 }
 
-.card h3,
-.card p{
-    padding:12px 15px;
+/* =========================
+      NAVBAR
+========================= */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:999;
+
+backdrop-filter:blur(16px);
+
+background:rgba(255,255,255,.75);
+
+box-shadow:0 2px 15px rgba(0,0,0,.05);
+
 }
 
-.card p{
-    color:#2e7d32;
-    font-weight:bold;
+.navbar{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:18px 8%;
+
 }
 
-.card button{
-    width:calc(100% - 30px);
-    margin:15px;
-    padding:12px;
-    background:#2e7d32;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+/* =========================
+        LOGO
+========================= */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:1.7rem;
+
+font-weight:700;
+
+color:var(--primary);
+
 }
 
-.card button:hover{
-    background:#1b5e20;
+.logo i{
+
+font-size:2rem;
+
 }
+
+/* =========================
+      NAV LINKS
+========================= */
+
+.nav-links{
+
+display:flex;
+
+gap:35px;
+
+}
+
+.nav-links li{
+
+position:relative;
+
+}
+
+.nav-links a{
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:var(--primary);
+
+}
+
+.nav-links li::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:2px;
+
+background:var(--primary);
+
+transition:.3s;
+
+}
+
+.nav-links li:hover::after{
+
+width:100%;
+
+}
+
+/* =========================
+        NAV RIGHT
+========================= */
+
+.nav-right{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+/* =========================
+      SEARCH BOX
+========================= */
+
+.search-box{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+background:white;
+
+padding:12px 18px;
+
+border-radius:50px;
+
+box-shadow:var(--shadow);
+
+}
+
+.search-box input{
+
+border:none;
+
+outline:none;
+
+background:transparent;
+
+font-size:15px;
+
+width:180px;
+
+}
+
+.search-box i{
+
+color:var(--primary);
+
+}
+
+/* =========================
+        NAV BUTTONS
+========================= */
+
+#cartBtn,
+#wishlistBtn,
+#darkMode{
+
+width:48px;
+
+height:48px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+font-size:18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+#cartBtn:hover,
+#wishlistBtn:hover,
+#darkMode:hover{
+
+background:var(--primary);
+
+color:white;
+
+transform:translateY(-3px);
+
+}
+
+/* =========================
+        COUNTERS
+========================= */
+
+#cartCount,
+#wishlistCount{
+
+position:absolute;
+
+top:-5px;
+
+right:-5px;
+
+width:22px;
+
+height:22px;
+
+border-radius:50%;
+
+background:#ff5252;
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:12px;
+
+font-weight:600;
+
+}
+
+/* =========================
+      ACTIVE NAV
+========================= */
+
+.nav-active{
+
+box-shadow:0 8px 30px rgba(0,0,0,.1);
+
+background:white;
+
+}
+
+/* =========================
+      REUSABLE BUTTONS
+========================= */
+
+.primary-btn{
+
+padding:15px 34px;
+
+background:var(--primary);
+
+color:white;
+
+border-radius:50px;
+
+font-size:16px;
+
+font-weight:600;
+
+box-shadow:0 12px 25px rgba(46,125,50,.3);
+
+}
+
+.primary-btn:hover{
+
+background:var(--primary-dark);
+
+transform:translateY(-4px);
+
+}
+
+.secondary-btn{
+
+padding:15px 34px;
+
+background:white;
+
+border:2px solid var(--primary);
+
+border-radius:50px;
+
+font-size:16px;
+
+font-weight:600;
+
+color:var(--primary);
+
+}
+
+.secondary-btn:hover{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+/* ========= End Part 1 ========= */
