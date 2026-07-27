@@ -1272,3 +1272,37 @@ font-size:.95rem;
 color:var(--text-light);
 
 }
+
+
+
+/* =========================
+     FEATURE DECORATION
+========================= */
+
+.feature::after{
+
+content:"";
+
+position:absolute;
+
+width:120px;
+
+height:120px;
+
+background:rgba(129,199,132,.12);
+
+border-radius:50%;
+
+top:-60px;
+
+right:-60px;
+
+transition:.45s;
+
+}
+
+.feature:hover::after{
+
+transform:scale(1.25);
+
+}
