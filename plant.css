@@ -1340,3 +1340,29 @@ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:35px;
 
 }
+
+/* =========================
+      CATEGORY CARD
+========================= */
+
+.category{
+
+background:white;
+
+border-radius:22px;
+
+padding:40px 25px;
+
+text-align:center;
+
+cursor:pointer;
+
+position:relative;
+
+overflow:hidden;
+
+transition:.4s;
+
+box-shadow:var(--shadow);
+
+}
