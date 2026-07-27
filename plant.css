@@ -698,3 +698,73 @@ color:#ffe082;
 
 }
 
+/* =========================
+     FLOATING LEAVES
+========================= */
+
+.hero::after{
+
+content:"🍃";
+
+position:absolute;
+
+right:8%;
+
+top:18%;
+
+font-size:90px;
+
+opacity:.18;
+
+animation:leafFloat 8s ease-in-out infinite;
+
+z-index:2;
+
+}
+
+.leaf{
+
+position:absolute;
+
+font-size:34px;
+
+opacity:.18;
+
+animation:leafMove 12s linear infinite;
+
+pointer-events:none;
+
+z-index:2;
+
+}
+
+.leaf.one{
+
+left:8%;
+
+top:15%;
+
+animation-delay:0s;
+
+}
+
+.leaf.two{
+
+right:15%;
+
+bottom:18%;
+
+animation-delay:3s;
+
+}
+
+.leaf.three{
+
+left:50%;
+
+top:8%;
+
+animation-delay:6s;
+
+}
+
