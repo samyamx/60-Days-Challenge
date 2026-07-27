@@ -1058,3 +1058,38 @@ transform:translate(-50%,0);
 
 }
 
+/* =========================
+      HERO DECORATION
+========================= */
+
+.hero-wave{
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:-2px;
+
+width:100%;
+
+z-index:3;
+
+line-height:0;
+
+}
+
+.hero-wave svg{
+
+display:block;
+
+width:100%;
+
+height:120px;
+
+fill:var(--bg);
+
+}
+
+/* ========= End Part 2 ========= */
