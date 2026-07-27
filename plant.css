@@ -840,3 +840,43 @@ font-size:.95rem;
 
 }
 
+/* =========================
+    SCROLL INDICATOR
+========================= */
+
+.scroll-down{
+
+position:absolute;
+
+bottom:35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+z-index:20;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+color:white;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+animation:bounce 2s infinite;
+
+}
+
+.scroll-down i{
+
+margin-top:8px;
+
+font-size:20px;
+
+}
+
