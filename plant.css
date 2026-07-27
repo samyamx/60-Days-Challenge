@@ -1325,3 +1325,18 @@ padding-top:100px;
 margin-bottom:60px;
 
 }
+
+
+/* =========================
+      CATEGORY GRID
+========================= */
+
+.category-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:35px;
+
+}
