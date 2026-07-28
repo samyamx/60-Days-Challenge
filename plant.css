@@ -1449,3 +1449,43 @@ white,
 
 }
 
+/* =========================
+      CATEGORY BUTTON
+========================= */
+
+.category .shop-link{
+
+margin-top:20px;
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+font-weight:600;
+
+color:var(--primary);
+
+opacity:0;
+
+transform:translateY(20px);
+
+transition:.4s;
+
+}
+
+.category:hover .shop-link{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.category .shop-link i{
+
+font-size:14px;
+
+}
+
