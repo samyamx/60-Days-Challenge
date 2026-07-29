@@ -1605,3 +1605,14 @@ color:var(--primary-dark);
 
 }
 
+/* =========================
+      SECTION TITLE
+========================= */
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
