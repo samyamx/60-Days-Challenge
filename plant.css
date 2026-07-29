@@ -1630,3 +1630,18 @@ font-size:1rem;
 
 }
 
+/* =========================
+     SOFT BACKGROUND
+========================= */
+
+.light-section{
+
+background:linear-gradient(
+180deg,
+#ffffff,
+#f8fff8
+);
+
+}
+
+/* ========= End Part 3 ========= */
