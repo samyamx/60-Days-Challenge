@@ -1624,24 +1624,3 @@ max-width:650px;
 
 margin:auto;
 
-margin-top:15px;
-
-font-size:1rem;
-
-}
-
-/* =========================
-     SOFT BACKGROUND
-========================= */
-
-.light-section{
-
-background:linear-gradient(
-180deg,
-#ffffff,
-#f8fff8
-);
-
-}
-
-/* ========= End Part 3 ========= */
